@@ -79,3 +79,35 @@ console.log(typeof userEmail);     // undefined
 
 let bigNumber = 1234567890123456789012345678901234567890n;
 console.log(typeof bigNumber);    // bigint
+
+
+
+//  +++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (primitive types) vs Heap (non-primitive types)
+
+// primitive basically gives copy of the actual value where as non-primitive gives reference of the location where value is stored in memory
+
+
+// primitive type example (stack)
+let myName = "vivek"
+
+let anotherName = myName      // myName ki copy anotherName me store ho gayi
+anotherName = "kanak"    // but changing anotherName will not affect myName
+
+console.log(myName);        // vivek
+console.log(anotherName);   // kanak
+
+
+
+// non-primitive type example (heap)
+let userOne ={
+    email : "user@example.com",
+    upi:"user@ybl"
+}
+
+let userTwo = userOne    // userTwo me userOne ka reference store ho gaya
+userTwo.email = "vivek@example.com"
+
+console.log(userOne.email);   
+console.log(userTwo.email);
