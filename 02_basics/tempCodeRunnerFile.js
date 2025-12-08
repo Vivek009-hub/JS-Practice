@@ -1,1 +1,1 @@
-const myArr = [0,1,2,3,4,5]
+const usable_another_array = another_array.flat(2)
