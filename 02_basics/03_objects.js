@@ -1,4 +1,4 @@
-// array can be created in 2 ways ( By literals orr By constructor)
+// Objects can be created in 2 ways ( By literals orr By constructor)
 // Object created by constructor method called as Singleton Object
 
 
@@ -21,6 +21,7 @@ const Jsuser = {
     email: "vivek@gmail.com",
     ifLoggedIn: false,
     lastLoginDays: ["Monday", "Tuesday"]
+    
 }
 
 console.log(Jsuser.email);     // this method is good
