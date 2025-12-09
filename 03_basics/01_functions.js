@@ -28,8 +28,19 @@
 
 
 
-function loginUserMessage(username){
+
+
+// function loginUserMessage(username){
+//     return `${username} just logged in `
+// }
+
+// console.log(loginUserMessage("vivek"))    // vivek just logged in
+// console.log(loginUserMessage())        // undefined
+
+
+function loginUserMessage(username="sam"){
     return `${username} just logged in `
 }
 
-console.log(loginUserMessage("vivek"))
+console.log(loginUserMessage("vivek"))    //vivek just logged in
+console.log(loginUserMessage())        // sam just logged in
