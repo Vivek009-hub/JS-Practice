@@ -130,6 +130,7 @@ console.log(hitesh)
 
 // API & JSON
 
+// structure of json 
 // {
 //     "name":"hitesh",
 //     "coursename":"js in hindi",
