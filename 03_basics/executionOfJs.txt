@@ -1,0 +1,43 @@
+// VIDEO 25  ( Execution Context and Call Stack)
+
+
+Javascript Execution Context
+
+1. Global Execution Context ( this )
+2. Function Execution Context
+3. Eval Execution Context
+
+
+Phases -> 
+-> memory creation Phase
+-> Execution Phase
+
+
+
+Example:- 
+let val1=10
+let val2=5
+function addNum(num1,num2){
+    let total = num1+num2
+    return total
+}
+let result1=addNum(val1,val2)
+let result2 = addNum(10,2)
+
+
+// Now we will understand Execution flow of JS code
+1. Global Execution
+         ⬇
+       this(firstly GE is allocated in this)
+2. Memory Phase( creation Phase)
+    val1 -> undefined
+    val2 -> undefined
+    addNum -> definition(poori function ki definition store hogi)
+    result1 -> undefined
+    result2 -> undefined
+
+3. Execution Phase
+   val1 <- 10
+   val2 <- 5
+   addNum -> it will create its own new Execution Context( new variable environment + Execution thread )
+
