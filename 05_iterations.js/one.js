@@ -44,7 +44,7 @@ for (const greet of greetings) {
 
 
 
-// Maps   ( maps are iterable )
+// Maps   ( maps are not iterable )
 
 const map = new Map()
 map.set('IN',"INDIA")
