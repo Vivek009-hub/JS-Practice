@@ -1,1 +1,1 @@
-    // console.log(myObject[key]);
+    // console.log(item);   // gives object in output
