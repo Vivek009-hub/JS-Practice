@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black {
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM learning on Chai aur codes <span style="display: none;">Test text</span></h1>
+        <h1>Lorem ipsum dolor sit </h1>
+        <h2>Lorem ipsum dolor sit </h2>
+        <h2>Lorem ipsum dolor sit </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <ul>
+            <li class="list-item">Home</li>
+            <li class="list-item">About</li>
+            <li class="list-item">Contact</li>
+        </ul>   
+    </div>
+</body>
+
+</html>
+
+
+// NOTES:-
+
+title.textContent => gives all content (including hidden element like span in this case)
+
+title.innerText => gives only visible text
+title.innerHTML => gives whole HTML content ('DOM learning on Chai aur codes <span style="display: none;">Test
+    text</span>')
+
+
+
+
+
+document.getElementById('title').getAttribute('id') // 'title'
+document.getElementById('title').getAttribute('class') // heading
+document.getElementById('title').setAttribute('class','test') // it will overwrite
+
+
+// querySelector => ek element pr kaam krta hai
+document.querySelector('h2')
+document.querySelector('#title') -> # for id
+document.querySelector('.heading') -> . for class
+
+
+// NOTE:- NodeList and HTML Collections are not pure array (only few methods of array are available)
+
+// querySelectorAll() => will give us Nodelist (kind of arrary)
+
+// document.getElementByClassName('list-item')   // will give us HTML collection of all li (HTMLCollection and NodeList are completely different)
+
+
+// map doesn't work on NodeList( we have to first convert it) 
+NodeList[0]  => iss trh se bhi access kr skte hai
+
+// same for HTMLCollection ( foreach/any loop   does not work on it - we have to convert it )
