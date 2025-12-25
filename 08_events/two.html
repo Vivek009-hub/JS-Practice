@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="first"></div>
+    <h1>Vivek</h1>
+    <button id="stop">Stop</button>
+</body>
+<!-- SetTimeout -> ek baar print krta hai bss 
+     SetInterval -> bar bar print krta hai timeperiod me 
+-->
+<script>
+    // setTimeout(function(){
+    //     console.log('hitesg');   // ek bar print hoga bs (with 2 sec delay)
+
+    // },2000)
+
+    const hitesh = function () {
+        console.log('Vivek');
+    }
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = "best Js series"
+    }
+    setTimeout(hitesh, 2000)
+    setTimeout(changeText, 2000)
+
+    
+// clear Interval
+
+    const createText = function () {
+        document.querySelector('#first').innerHTML = 'Hii'
+    }
+    const create = setTimeout(createText, 2000)
+
+    document.getElementById('stop').addEventListener('click', function () {
+        clearTimeout(create)
+
+    })
+</script>
+
+</html>
